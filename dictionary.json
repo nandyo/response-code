@@ -1,0 +1,42 @@
+{
+    "success":{
+        "2000":{"title": "Success", "description": "Process success"},
+        "2001":{"title": "Got Response Data", "description": "Retrieved response data"},
+        "2002":{"title": "General Response of Ok", "description": "Source of truthy return primitive true"},
+        "2003":{"title": "DB Unchanging Transaction", "description": "Unmodified table row"},
+        "2004":{"title": "Form Submited", "description": "Form inserted into DB"},
+        "2005":{"title": "Form Assured", "description": "Form inserted into DB and checked with select query"},
+        "2006":{"title": "File Submited", "description": "File created into folder"},
+        "2007":{"title": "File Assured", "description": "File created into folder and checked with fsread"},
+        "2008":{"title": "Authorized", "description": "Confirmed user authority"},
+        "2010":{"title": "Data Deleted", "description": "Record deleted from DB"},
+        "2011":{"title": "Data Deletion Assured", "description": "Record deleted from DB and checked with select query"},
+        "2012":{"title": "File Deleted", "description": "File deleted from folder"},
+        "2013":{"title": "File Deletion Assured", "description": "File deleted from folder and checked with fsread"}
+    },
+    "error":{
+        "4000":{"title": "Error", "description": "Process error"},
+        "4001":{"title": "DB Querying Failure", "description": "Failure while executing query"},
+        "4002":{"title": "General Response of No", "description": "Source of truthy return primitive false"},
+        "4003":{"title": "Invalid HTTP Payload", "description": "Missing/unknown property name or wrong value data type"},
+        "4004":{"title": "Invalid HTTP API", "description": "Router path not found"},
+        "4005":{"title": "Not Authorized", "description": "User not authorizated"},
+        "4006":{"title": "DB Response Not Found", "description": "DB query has found record in less than 0 occurance"},
+        "4007":{"title": "HTTP Time Out", "description": "Ecatalog service response exceed time out"},
+        "4008":{"title": "File Not Found", "description": "File name not found on corresponding path"},
+        "4009":{"title": "File Broken", "description": "File name recorded but image not found on corresponding path"},
+        "4010":{"title": "Client Time Out", "description": "Client load state exceed determined time"},
+        "4012":{"title": "Null Required Field", "description": "Found some null value in required input"},
+        "4013":{"title": "TextField Violation", "description": "Some of the input violates datatype"},
+        "4014":{"title": "Data Fail Submit", "description": "Data fail to insert DB"},
+        "4015":{"title": "Data Corrupted", "description": "Data submited but value changes on checking"},
+        "4016":{"title": "File Fail Submit", "description": "File fail to create"},
+        "4017":{"title": "File Corrupted", "description": "File submited but value changes on checking"},
+        "4018":{"title": "Data Fail Delete", "description": "Data fail to delete"},
+        "4019":{"title": "Data Persist", "description": "Data deleted but value persist on checking"},
+        "4020":{"title": "File Fail Delete", "description": "File fail to delete"},
+        "4021":{"title": "File Persist", "description": "File deleted but value persist on checking"},
+        "4022":{"title": "API Request Failure", "description": "External API terminates request with error"},
+        "4023":{"title": "API Response Not Found", "description": "API request get response that symbolize data of 0 occurance"}
+    }
+}
