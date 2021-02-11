@@ -37,9 +37,11 @@ module.exports = class ResponseCode{
 
     /* Backend Functions */
     pushCode(...codes){
-        // responsecode.pushCode(<code :Array>)
-        if(!Array.isArray(codes)) throw new Error(`argument must be an array. Found in .pushCode() of argument: "${codes}"`)
-        codes.forEach(code => this.status.add(code))
+        // responsecode.pushCode(<<code :Number>,...>)
+        codes.forEach(code=>{
+            // if(typeof code != "number") throw new Error(`argument must be a number. Found in pushCode() of argument: "${code}"`)
+            this.status.add(code)
+        })
     }
     pushData(data){
         // responsecode.pushData(<data :Object|Array>)
