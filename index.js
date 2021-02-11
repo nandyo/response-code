@@ -48,12 +48,10 @@ module.exports = class ResponseCode{
         else if(Object.keys(this.data).length) this.data = {...this.data, ...data}
         else this.data = data
     }
-    pushTrace(){
-        // responsecode.pushTrace(<data :Object|Array>)
-        if(typeof this.trace == "undefined") this.trace = trace
-        else if(Array.isArray(this.trace)) this.trace = [...this.trace, ...trace]
-        else if(Object.keys(this.trace).length) this.trace = {...this.trace, ...trace}
-        else this.trace = trace
+    pushTrace({code, trace}){
+        // responsecode.pushTrace({code: <code :Number>, trace: <custom error handle in front :Any>})
+        if(typeof this.trace == "undefined") this.trace = {[code]: trace}
+        else this.trace = {...this.trace, ...{[code]: trace}}
     }
     result(){
         return {
