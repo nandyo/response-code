@@ -43,6 +43,9 @@ module.exports = class ResponseCode{
             this.status.add(code)
         })
     }
+    deleteCode(...codes){
+        codes.forEach(code=> this.status.delete(code))
+    }
     pushData(data){
         // responsecode.pushData(<data :Object|Array>)
         if(typeof this.data == "undefined") this.data = data
