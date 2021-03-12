@@ -47,7 +47,7 @@ module.exports = class ResponseCode{
         codes.forEach(code=> this.status.delete(code))
     }
     pushData(data){
-        // responsecode.pushData(<data :Object|Array>)
+        // responsecode.pushData(<data :Any>)
         if(typeof this.data == "undefined") this.data = data
         else if(Array.isArray(this.data)) this.data = [...this.data, ...data]
         else if(Object.keys(this.data).length) this.data = {...this.data, ...data}
